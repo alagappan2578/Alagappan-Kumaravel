@@ -1,3 +1,126 @@
+* {
+    width: 100wv;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 130px;
+    background-color: orange;
+    padding-bottom: 0px;
+    display: flex;
+}
+body {
+    margin: 0;
+	background-image: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100vw;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+.logo {
+    text-align: center;
+    margin: 10px 0px;
+}
+.accodian {
+
+    margin: 10px 30px;
+}
+/* ------------------nav start*/ 
+nav {
+    text-align: center;
+    font-family: "PT Serif";
+    padding-top: 50px;
+}
+.top {
+    font-weight:bold ;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    margin: 0px 20px;
+}
+.top::before,
+.top::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: green;
+    transform: scaleX(0);
+    transition: transform .25s;
+
+}
+.top::before{
+    top: -3px;
+    transform-origin: left;
+}
+.top::after{
+    bottom: -3px;
+    transform-origin: right;
+}
+.top:hover::before,
+.top:hover::after {
+    transform: scaleX(1);
+}
+/*------------------------nav end*/ 
+.sand {
+    width: 50px;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.wave {
+    text-align: center;
+    font-size: 30px;
+	font-weight: bold;
+    color: purple;
+    -webkit-box-reflect: below 2px
+    linear-gradient(transparent, rgba(0,0,0,0.2));
+}
+.wave span {
+    font-family: "PT Serif";
+    display: inline-block;
+    animation: wave-anim 1s infinite;
+    animation-delay: calc(0.1s * var(--item));
+}
+@keyframes wave-anim {
+    0%,
+    40%,
+    100% {
+        transform: translateY(0);
+
+    }
+    20% {
+        transform: translateY(-5px);
+    }
+}
+#front{
+    text-align: center;
+    margin-bottom: 30px;
+}
+img{
+    width:210px;
+    height: 360px;
+    border-radius: 70px;
+}
+#intro {
+    display: flex;
+}
+.info {
+    margin: 0px 200px;
+
+}
+
 h1 ,h2 ,h3 {
 	color:purple;
     font-family:"PT Serif";
@@ -6,4 +129,8 @@ h1 ,h2 ,h3 {
 p ,ul {
 	font-family:"Source Sans Pro";
 	
+}
+a {
+    text-decoration: none;
+    
 }
